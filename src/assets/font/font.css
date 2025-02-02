@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'MainFont';
+    src: url('./JingNanJunJunTi-JinNanJunJunTi-Bold-2.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Siyuan';
+    src: url('./SourceHanSansOLD-Normal-2.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Siyuan';
+    src: url('./SourceHanSansOLD-Medium-2.otf');
+    font-weight: medium;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Siyuan';
+    src: url('./SourceHanSansOLD-Bold-2.otf');
+    font-weight: Bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Siyuan';
+    src: url('./SourceHanSansOLD-Light-2.otf');
+    font-weight: lighter;
+    font-style: normal;
+  }
