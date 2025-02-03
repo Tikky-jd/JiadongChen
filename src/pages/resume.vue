@@ -148,7 +148,6 @@ header {
 
 #bodyContent {
     background-color: #f8f8d9;
-    height: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
