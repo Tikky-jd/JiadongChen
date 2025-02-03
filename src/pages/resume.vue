@@ -315,8 +315,16 @@ header {
 }
 #skillBox{
     text-align: left;
+
 }
 .skillList{
     font-size: 16px;
+    width: 800px;
+
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 1px;
 }
 </style>
