@@ -314,17 +314,14 @@ header {
     font-size: 16px;
 }
 #skillBox{
+    width: 100%;
     text-align: left;
-
+    font-size: 16px;
 }
 .skillList{
     font-size: 16px;
-    width: 800px;
+
 
 }
 
-hr{
-    margin-top: 20px;
-    margin-bottom: 1px;
-}
 </style>
