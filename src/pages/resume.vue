@@ -142,7 +142,6 @@ header {
 #body {
     background-color: #f0f0f0;
     width: 100%;
-    height: 410px;
     margin: 0;
     padding-top: 10px;
 }
