@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router' 
 import pinia from './stores'  //引入
 import './assets/font/font.css'
+import 'amfe-flexible';
+
 const app = createApp(App)
 
 app.use(router)

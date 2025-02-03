@@ -51,9 +51,9 @@
             <p class="footTitle">教育经历</p>
             <hr />
             <div class="edu">
-                <h4>浙江科技大学</h4>
-                <h4>数字媒体技术</h4>
-                <h4 style="text-indent: 3em;">2022.09-2026.06</h4>
+                <h4 class="time">浙江科技大学</h4>
+                <h4 class="time">数字媒体技术</h4>
+                <h4 class="time">2022.09-2026.06</h4>
             </div>
             <div class="eduInfo">
                 主修课程：计算机网络、程序设计基础、高级程序设计、数据结构与算法、数据库系统设计基础、HTML5程序设计、前端高级程序设计、数字媒体后期制作、图形技术、交互动画技术、游戏设计与开发、游戏场景设计、数字影像技术等
@@ -67,26 +67,26 @@
             <hr />
             <div class="ProjectList">
                 <div class="edu">
-                    <h4>浙江省"和利时杯”服务外包</h4>
-                    <h4>前端开发</h4>
-                    <h4 style="text-indent: 3em;">2024.08-2024.11</h4>
-                </div>
+                    <h4 class="time">浙江省"和利时杯”服务外包</h4>
+                    <h4 class="time">前端开发</h4>
+                    <h4 class="time">2024.08-2024.11</h4>
+                </div> 
                 <div class="eduInfo">
                     <span style="font-weight: bold;">技术栈：Vue3+ElementPlus+Vue-Router+Pinia+Axios</span>
                     <br />
-                    ⚪&nbsp;&nbsp;使用Vue组件库开发，页面美观简洁，开发速度快。
+                    <span class="skillList">⚪&nbsp;&nbsp;使用Vue组件库开发，页面美观简洁，开发速度快。</span>
                     <br>
-                    ⚪&nbsp;&nbsp;对Axios进行二次封装，添加请求拦截器和响应拦截器，优化前后端交互。
+                    <span class="skillList">⚪&nbsp;&nbsp;对Axios进行二次封装，添加请求拦截器和响应拦截器，优化前后端交互。</span>
                     <br>
-                    ⚪&nbsp;&nbsp;使用Pinia实现数据持久化，功能完善。
+                    <span class="skillList">⚪&nbsp;&nbsp;使用Pinia实现数据持久化，功能完善。</span>
                 </div>
             </div>
 
 
             <div class="edu">
-                <h4>电商仿某团外卖平台项目</h4>
-                <h4>前端开发</h4>
-                <h4 style="text-indent: 3em;">2024.08-2024.11</h4>
+                <h4 class="time">电商仿某团外卖平台项目</h4>
+                <h4 class="time">前端开发</h4>
+                <h4 class="time">2024.08-2024.11</h4>
             </div>
             <div class="eduInfo">
                 <span style="font-weight: bold;">技术栈：Vue3+ElementPlus+Vue-Router+Pinia+Axios</span>
@@ -257,7 +257,6 @@ header {
 
 .footContent1 {
     width: 1000px;
-    height: 400px;
     border-radius: 20px;
     padding: 20px;
     background-color: #fff4f4;
@@ -275,7 +274,6 @@ header {
 }
 .footContent2 {
     width: 1000px;
-    height: 600px;
     border-radius: 20px;
     padding: 20px;
     background-color: #f2fffc;
@@ -289,7 +287,6 @@ header {
 
 .footContent3 {
     width: 1000px;
-    height: 400px;
     border-radius: 20px;
     padding: 20px;
     background-color: #fff4f4;
@@ -300,7 +297,11 @@ header {
     width: 200px;
     text-align: left;
 }
+.time{
 
+    font-size: 20px;
+    width: 300px;
+}
 .edu {
     width: 100%;
     display: flex;
@@ -311,6 +312,7 @@ header {
 .eduInfo {
     width: 100%;
     text-align: left;
+    font-size: 16px;
 }
 #skillBox{
     text-align: left;
