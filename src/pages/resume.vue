@@ -318,10 +318,7 @@ header {
     text-align: left;
     font-size: 16px;
 }
-.skillList{
-    font-size: 16px;
-
-
+hr{
+    width: 100%;
 }
-
 </style>
