@@ -3,19 +3,23 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-function toResume() {
+function toHome() {
 
-  router.push('/resume');
+  router.push('/home');
 }
 </script>
 
 <template>
   <header>
     <div id="box">
-      <div id="Title">陈家栋</div>
+      <div id="Title">
+        <span id="name">陈家栋</span>
+        <div class="EmptyBox"></div> 
+        <span class="txt">WELCOME TO MY WEBSITE!</span>
+      </div>
     </div>
     
-    <div id="subTitle" @click="toResume">下拉 个人简历</div>
+    <div id="subTitle" @click="toHome()">Click Here </div>
   </header>
 </template>
 
@@ -33,7 +37,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-#Title {
+#Title #name{
   font-size: 100px;
   color: #e4c99d;
   font-family: mainFont;
@@ -44,5 +48,14 @@ header {
 }
 #subTitle:hover {
   cursor: pointer;
+}
+.txt{
+  font-size: 20px;
+  color: #e4c99d;
+  font-family: mainFont;
+}
+.EmptyBox{
+  height: 20px;
+  width: 100%;
 }
 </style>

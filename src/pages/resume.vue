@@ -152,7 +152,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 #bodyContent p {
@@ -258,10 +257,11 @@ header {
     border-radius: 20px;
     padding: 20px;
     background-color: #fff4f4;
+    margin-top: 20px;
 }
 
 .footContent1 h4 {
-    width: 200px;
+    width: 300px;
     text-align: left;
 }
 
@@ -279,7 +279,7 @@ header {
 }
 
 .footContent2 h4 {
-    width: 200px;
+    width: 300px;
     text-align: left;
 }
 
@@ -296,7 +296,6 @@ header {
     text-align: left;
 }
 .time{
-
     font-size: 20px;
     width: 300px;
 }
