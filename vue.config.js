@@ -1,14 +1,29 @@
 const { defineConfig } = require('@vue/cli-service')
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const pxtorem = require('postcss-pxtorem')
 
 module.exports = defineConfig({
-  publicPath: './', // 修改目录
-  outputDir: 'dist', // build时构建文件的目录 构建时传入 --no-clean 可关闭该行为
-  assetsDir: 'assets', // build时放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
-  filenameHashing: true, // 默认在生成的静态资源文件名中包含hash以控制缓存
-  runtimeCompiler: false, // 是否使用包含运行时编译器的 Vue 构建版本
-  productionSourceMap: true, // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
+  publicPath: './',
+  outputDir: 'dist',
+  assetsDir: 'assets',
+  filenameHashing: true,
+  runtimeCompiler: false,
+  productionSourceMap: true,
   transpileDependencies: true,
+  
+  configureWebpack: {
+    plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+
+  },
 
   lintOnSave: true,
   css: {
@@ -17,13 +32,13 @@ module.exports = defineConfig({
         postcssOptions: {
           plugins: [
             pxtorem({
-              rootValue: 150, // 根元素字体大小
-              propList: ['*'], // 可以从px转换为rem的属性，匹配正则
-            }),
-          ],
+              rootValue: 150,
+              propList: ['*'],
+              selectorBlackList: [/(^el-)/] // 过滤Element组件样式
+            })
+          ]
         }
-
-      },
-    },
-  },
+      }
+    }
+  }
 })

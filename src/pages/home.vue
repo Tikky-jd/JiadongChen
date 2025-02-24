@@ -4,10 +4,31 @@ export default {
     return {
       hoverIndex: null, // 用于跟踪当前悬停的圆形元素的索引
       jobs: [
-        '前端开发',
-        '产品摄影',
-        '三维建模'
-      ], // 确保 jobs 有数据
+        {
+          title: '前端开发',
+          path: [
+            require('@/assets/pic/web/1.png'), // 使用require加载图片
+            require('@/assets/pic/web/1.png'),
+            require('@/assets/pic/web/1.png'),
+          ]
+        },
+        {
+          title: '产品摄影',
+          path: [
+            require('@/assets/pic/Photos/1.jpg'),
+            require('@/assets/pic/Photos/1.jpg'),
+            require('@/assets/pic/Photos/1.jpg'),
+          ]
+        },
+        {
+          title: '三维建模',
+          path: [
+            require('@/assets/pic/Product/final.png'),
+            require('@/assets/pic/Product/2.jpg'),
+            require('@/assets/pic/Product/3.png'),
+          ]
+        }
+      ],
     };
   },
   methods: {
@@ -27,12 +48,23 @@ export default {
       :class="{ active: hoverIndex === index, hidden: hoverIndex !== null && hoverIndex !== index }"
       @click="handleClick(index)">
       <span class="job" :class="{ 'move-up': hoverIndex === index }">
-        {{ job }}
+        {{ job.title }}
       </span>
 
-      <span class="subtitle" :class="{ 'move-up': hoverIndex === index }">
-        案例
-      </span>
+      <div class="subtitle" :class="{ 'move-up': hoverIndex === index }">
+        <div id="anli">案例</div>
+        <div id="content">
+          <!-- 修复图片加载方式 -->
+          <img v-for="(imgPath, imgIndex) in job.path" 
+               :key="imgIndex" 
+               :src="imgPath" 
+               :alt="`案例${imgIndex + 1}`"
+               class="case-image">
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -108,11 +140,32 @@ export default {
   font-size: 24px;
   font-family: mainFont;
   color:#1b563b ;
+  width: 80%;
+  height: 600px;
 }
 .subtitle.move-up{
   opacity: 100;
   position: absolute;
-  top: 200px;
-  left: 100px;
+  top: 160px;
+}
+.subtitle #content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+#anli{
+  margin-bottom: 20px;
+}
+
+.case-image {
+  width: 200px;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+  border: 2px solid #1b563b;
+}
+
+.case-image:hover {
+  transform: scale(1.05);
 }
 </style>
